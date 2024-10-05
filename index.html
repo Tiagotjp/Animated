@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Animated</title>
+</head>
+<body>
+    <!-- Menu de navegação -->
+    <nav class="navbar">
+        <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+        <ul class="nav-menu">
+            <li><a href="#">Início</a></li>
+            <li><a href="#">Sobre</a></li>
+            <li><a href="#">Serviços</a></li>
+            <li><a href="#">Contato</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1 id="artext">ANIMATED</h1>
+    </div>
+    
+    <!-- Campos de entrada e botões -->
+    <div class="input-container">
+        <input type="text" id="userInput" placeholder="Digite algo..." />
+        <button onclick="updateText()">Aplicar Texto</button>
+        <button onclick="clearText()">Limpar Texto</button>
+        <select id="fontSelect" onchange="updateFont()">
+            <option value="Arial">Arial</option>
+            <option value="Verdana">Verdana</option>
+            <option value="Times New Roman">Times New Roman</option>
+            <option value="Courier New">Courier New</option>
+            <option value="Georgia">Georgia</option>
+            <option value="Tahoma">Tahoma</option>
+            <option value="Trebuchet MS">Trebuchet MS</option>
+            <option value="Comic Sans MS">Comic Sans MS</option>
+        </select>
+        <select id="fontStyleSelect" onchange="updateFontStyle()">
+            <option value="normal">Normal</option>
+            <option value="italic">Itálico</option>
+            <option value="bold">Negrito</option>
+            <option value="bold italic">Negrito e Itálico</option>
+        </select>
+        <select id="fontSizeSelect" onchange="updateFontSize()">
+            <option value="2rem">Pequeno</option>
+            <option value="4rem" selected>Médio</option>
+            <option value="6rem">Grande</option>
+            <option value="8rem">Muito Grande</option>
+        </select>
+    </div>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <p>&copy; 2024 Meu Site. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Inclui o script JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

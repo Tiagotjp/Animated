@@ -1,0 +1,193 @@
+/* Fundo da página */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: url('background-image.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+}
+
+/* Menu de navegação */
+.navbar {
+    background: linear-gradient(to right, violet, indigo, blue, green, yellow, orange, red);
+    padding: 15px;
+    position: fixed; /* Fixa o menu no topo da página */
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Botão "hambúrguer" */
+.hamburger {
+    display: none;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar ul li {
+    display: inline;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.navbar ul li a:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Estilo do menu em telas menores */
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+        display: none; /* Oculta o menu por padrão */
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.9);
+        padding: 10px 0;
+    }
+
+    .navbar ul.show {
+        display: flex;
+        flex-direction: row; /* Alinha os itens do menu em linha quando visível */
+        justify-content: space-around; /* Espaça as opções horizontalmente */
+    }
+
+    .hamburger {
+        display: block;
+    }
+}
+
+/* Container para o texto animado */
+.container {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    margin: 100px auto 20px auto; /* Adiciona espaço para o menu fixo */
+    text-align: center;
+    width: 85%;
+    max-width: 1000px;
+}
+
+/* Estilo do texto animado */
+#artext {
+    background: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+    background-clip: text;
+    display: inline-block;
+    color: transparent;
+    animation: animated 5s linear infinite;
+    font-size: 4rem;
+    font-weight: bold;
+    margin: 0;
+    word-wrap: break-word;
+    max-width: 100%; /* Adapta ao tamanho do container */
+}
+
+/* Estilo responsivo para o texto */
+@media (max-width: 768px) {
+    #artext {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #artext {
+        font-size: 2rem;
+    }
+}
+
+/* Animação do texto */
+@keyframes animated {
+    to { background-position-x: 300px; }
+}
+
+/* Estilo do campo de entrada e botões */
+.input-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    padding: 20px;
+    max-width: 100%;
+}
+
+#userInput {
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    max-width: 100%;
+    flex-grow: 1;
+    min-width: 150px;
+    width: auto;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Estilo dos elementos de seleção */
+select {
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Rodapé */
+.footer {
+    background: linear-gradient(to right, violet, indigo, blue, green, yellow, orange, red);
+    text-align: center;
+    padding: 20px;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: auto;
+}
+
+/* Estilo responsivo para o rodapé */
+@media (max-width: 768px) {
+    .footer {
+        font-size: 0.9rem;
+    }
+}
